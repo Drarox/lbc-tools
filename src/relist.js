@@ -6,8 +6,8 @@
   const optionsPage = `${depositPage}/options`;
 
   const style = `
-    .lbc-tools-relist { display:inline-flex; align-items:center; justify-content:center; min-height:44px; border:0; border-radius:9px; padding:0 14px; background:#EC5A13; color:#fff; box-shadow:0 2px 5px rgba(236,90,19,.25); font:700 14px/1 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; cursor:pointer; }
-    .lbc-tools-relist:hover { background:#ca4810; } .lbc-tools-relist:disabled { opacity:.65; cursor:wait; }
+    .lbc-tools-relist { display:inline-flex; align-items:center; justify-content:center; min-height:44px; border:0; border-radius:9999px; padding:0 14px; background:#EC5A13; color:#fff; box-shadow:0 2px 5px rgba(236,90,19,.25); font:700 14px/1 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; cursor:pointer; }
+    .lbc-tools-relist:hover { background:#f07b42; } .lbc-tools-relist:disabled { opacity:.65; cursor:wait; }
     .lbc-tools-dialog-backdrop { position:fixed; inset:0; z-index:2147483646; display:grid; place-items:center; padding:18px; background:rgba(15,23,42,.48); font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
     .lbc-tools-dialog { width:min(440px,100%); padding:24px; border-radius:16px; background:#fff; color:#172033; box-shadow:0 20px 60px rgba(0,0,0,.3); }
     .lbc-tools-dialog h2 { margin:0 0 7px; font-size:20px; } .lbc-tools-dialog p { margin:0 0 18px; color:#526070; font-size:14px; line-height:1.45; }

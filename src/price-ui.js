@@ -3,8 +3,8 @@
 
   const tools = window.LBCTools;
   const style = `
-    .lbc-tools-price { display:inline-flex; align-items:center; flex-wrap:wrap; gap:7px; margin-left:10px; color:#1f2937; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; vertical-align:middle; }
-    .lbc-tools-price__before { color:#c23522; font-size:calc(1.25rem * var(--spacing-factor)); line-height:1.4; text-decoration:line-through; }
+    .lbc-tools-price { display:inline-flex; align-items:center; flex-wrap:wrap; gap:7px; margin-left:2px; color:#1f2937; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; vertical-align:middle; }
+    .lbc-tools-price__before { color:#c23522; font-size:calc(1rem * var(--spacing-factor)); line-height:1.4; text-decoration:line-through; }
     .lbc-tools-price__delta { border-radius:999px; padding:3px 8px; background:#e8f8ee; color:#087443; font-size:calc(1.25rem); line-height:1.4; font-weight:750; }
     .lbc-tools-price__delta--up { background:#fff0ee; color:#c23522; }
     .lbc-tools-toast { position:fixed; right:20px; bottom:20px; z-index:2147483647; max-width:360px; padding:13px 16px; border-radius:10px; background:#EC5A13; color:#fff; box-shadow:0 8px 25px rgba(0,0,0,.25); font:600 14px/1.35 system-ui; }
