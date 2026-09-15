@@ -108,10 +108,8 @@
         : age > 14 ? 'lbc-tools-date-tag--warning' : '';
       tags.append(createDateTag('Publié le', publishedAt, statusClass));
     }
-    if (modifiedAt) {
-      const statusClass = publishedAt && !isSameCalendarDate(publishedAt, modifiedAt)
-        ? 'lbc-tools-date-tag--danger' : '';
-      tags.append(createDateTag('Modifié le', modifiedAt, statusClass));
+    if (modifiedAt && (!publishedAt || !isSameCalendarDate(publishedAt, modifiedAt))) {
+      tags.append(createDateTag('Renouvelé le', modifiedAt, 'lbc-tools-date-tag--danger'));
     }
 
     const existingTag = description.querySelector('[data-spark-component="tag"]');
