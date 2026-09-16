@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "LBC Tools",
+  "version": "1.0.0",
+  "description": "Price changes and simple relisting tools for Leboncoin.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "lbc-tools@extension",
+      "strict_minimum_version": "128.0"
+    }
+  },
+  "host_permissions": ["https://*.leboncoin.fr/*", "https://api.leboncoin.fr/*"],
+  "content_scripts": [{
+    "matches": ["https://*.leboncoin.fr/*"],
+    "js": [
+      "src/core.js",
+      "src/ad-service.js",
+      "src/price-ui.js",
+      "src/relist.js",
+      "src/app.js"
+    ],
+    "run_at": "document_start",
+    "world": "MAIN"
+  }]
+}
