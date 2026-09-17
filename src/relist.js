@@ -179,7 +179,7 @@
   }
 
   tools.addRelistButtons = () => {
-    if (!location.pathname.startsWith('/compte/part/mes-annonces')) return;
+    if (!tools.features.relister || !location.pathname.startsWith('/compte/part/mes-annonces')) return;
     for (const card of document.querySelectorAll('li[data-qa-id="ad_item_container"]')) {
       if (card.querySelector('[data-lbc-tools-relist]') || /mise en pause/i.test(card.textContent)) continue;
       const id = tools.adIdFromUrl(card.querySelector('a[href*="/ad/"]')?.getAttribute('href'));

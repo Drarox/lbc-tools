@@ -12,6 +12,7 @@
     }, 350);
   }
 
+  tools.refresh = refresh;
   refresh();
   new MutationObserver(refresh).observe(document.documentElement, { childList: true, subtree: true });
   window.addEventListener('popstate', refresh);

@@ -118,19 +118,20 @@
   }
 
   tools.enhancePriceDisplays = async () => {
+    if (!tools.features.oldPrice && !tools.features.dates) return;
     const detail = document.querySelector('article#grid');
     if (detail) {
       const id = tools.adIdFromUrl(location.pathname);
       if (id) {
         const ad = await tools.getPublicAd(id);
-        displayPriceChange(detail, id, ad);
-        displayDates(ad);
+        if (tools.features.oldPrice) displayPriceChange(detail, id, ad);
+        if (tools.features.dates) displayDates(ad);
       }
     }
 
     for (const card of document.querySelectorAll('[data-qa-id="aditem_container"]')) {
       const id = tools.adIdFromUrl(card.querySelector('a[href*="/ad/"]')?.getAttribute('href'));
-      if (id) displayPriceChange(card, id, await tools.getPublicAd(id));
+      if (id && tools.features.oldPrice) displayPriceChange(card, id, await tools.getPublicAd(id));
     }
   };
 
